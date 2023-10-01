@@ -41,7 +41,7 @@ const allowedPets = 3;
 //      if adventurous is true, set `result` to be "Adventures are great!", 
 //      if it's not true,  set `result` to be "How about we stay home?"
 //      Console log the value of `result`
-let result = '';
+let result;
 if(adventurous){
   result = 'Adventures are great!';
 } else {
@@ -66,7 +66,7 @@ console.log(diceRoll);
 //      set `petStatus` to the value of "I have enough pets" 
 //      if the value of `pets` is greater than the value of `allowedPets`.
 //      set `petStatus` to the value of "Oh no, I have too many pets!"
-let petStatus = '';
+let petStatus;
 if(pets < allowedPets){
   petStatus = 'I can have more pets';
 } else if(pets == allowedPets){
@@ -82,7 +82,7 @@ if(pets < allowedPets){
 //      assigns the highest value to `mostPets`. There's several possibilities --
 //      be sure to think through all the scenarios. 
 //      console.log `mostPets` after the conditional has run.
-let mostPets = 0;
+let mostPets;
 if(pets < friendsPets){
   mostPets = friendsPets;
 } else {
@@ -97,16 +97,19 @@ console.log(mostPets);
 //      Otherwise, "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 //      console.log `luckyResult` after the conditional has run.
-let luckyResult = '';
+let luckyResult;
 switch(luckyNumber){
-  case '1':
+  case 1:
     luckyResult = 'First is the worst';
     break;
-  case '2':
+  case 2:
     luckyResult = 'Second is the best';
     break;
-  case '3':
+  case 3:
     luckyResult = 'Third is the one with the polka dot dress';
+    break;
+  default:
+    luckyResult = 'Luck is what happens when preparation meets opportunity';
     break;
 }
 console.log(luckyResult);
